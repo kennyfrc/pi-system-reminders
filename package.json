@@ -1,0 +1,38 @@
+{
+  "name": "pi-system-reminders",
+  "version": "0.1.0",
+  "description": "ai21-style transient reminder injection for Pi — a durability state machine on the context event. Reminders are re-derived per evaluation and pinned to a clock edge (turn:start | call:every | tool:error). Never persisted; never accumulate in history.",
+  "keywords": [
+    "pi-package",
+    "reminders",
+    "context",
+    "transient"
+  ],
+  "license": "MIT",
+  "author": "Kenn Costales",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennyfrc/pi-system-reminders.git"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4",
+    "@types/node": "^22.0.0",
+    "@earendil-works/pi-agent-core": "0.80.10",
+    "@earendil-works/pi-ai": "0.80.10",
+    "@earendil-works/pi-coding-agent": "0.80.10",
+    "@earendil-works/pi-tui": "0.80.10"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
