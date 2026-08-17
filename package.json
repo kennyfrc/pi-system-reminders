@@ -1,0 +1,38 @@
+{
+  "name": "@kennyfrc/pi-system-reminders",
+  "version": "0.2.0",
+  "description": "Transient and durable system reminders for Pi — a durability state machine on the context event. Transient reminders re-derive per evaluation at a clock edge (turn:start | call:every | tool:error) and never persist; durable reminders are persisted once as a session message before the session's first user prompt (same <system_reminder> envelope, user-role wire shape, durable=\"true\" marker) and replay in every subsequent request and on resume.",
+  "keywords": [
+    "pi-package",
+    "reminders",
+    "context",
+    "transient"
+  ],
+  "license": "MIT",
+  "author": "Kenn Costales",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennyfrc/pi-system-reminders.git"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4",
+    "@types/node": "^22.0.0",
+    "@earendil-works/pi-agent-core": "0.80.10",
+    "@earendil-works/pi-ai": "0.80.10",
+    "@earendil-works/pi-coding-agent": "0.80.10",
+    "@earendil-works/pi-tui": "0.80.10"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
